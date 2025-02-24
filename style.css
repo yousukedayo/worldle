@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121213;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.letter-box {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    border: 2px solid #3a3a3c;
+    background-color: #121213;
+    color: white;
+}
+
+.correct { background-color: #538d4e !important; } /* 緑（正解） */
+.close { background-color: #b59f3b !important; } /* 黄色（位置違い） */
+.wrong { background-color: #3a3a3c !important; } /* 灰色（不正解） */
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.key {
+    width: 40px;
+    height: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #818384;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.special-key {
+    width: 80px;
+}
