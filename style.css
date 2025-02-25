@@ -49,17 +49,20 @@ h1 {
 }
 
 .key {
-    width: 40px;
-    height: 50px;
+    width: 30px;
+    height: 40px;
     font-size: 18px;
     text-transform: uppercase;
     background-color: #818384;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 .special-key {
-    width: 80px;
+    width: 50px;
+}
+.enter {
+    font-size: 10px;
 }
