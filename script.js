@@ -67,11 +67,24 @@ function checkWord() {
     }
 
     if (currentWord === correctWord) {
-        alert("Congratulations! 🎉 You guessed the word!");
+        showWinMessage();
     } else if (attempts >= 5) {
         alert("Game Over! Try again!");
     }
 
     attempts++;
     currentWord = "";
+}
+function showWinMessage() {
+    const winMessage = document.getElementById("win-message");
+    winMessage.style.display = "block";
+    
+    // 🎊 コンフェッティ（紙吹雪）エフェクト
+    const confettiSettings = { target: 'win-message' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+
+    // 🎵 効果音（勝利時の音）
+    let winSound = new Audio("win-sound.mp3");
+    winSound.play();
 }
