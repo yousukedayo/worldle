@@ -1,5 +1,4 @@
-const wordList = ["APPLE", "CODES", "SMART", "JAVAS", "UNITY"];
-const correctWord = wordList[Math.floor(Math.random() * wordList.length)];
+const correctWord = "PROM?";
 let attempts = 0;
 let currentWord = "";
 
@@ -41,7 +40,7 @@ function updateGrid() {
 
 function checkWord() {
     if (currentWord.length !== 5) {
-        alert("Please enter a 5-letter word!");
+        // alert("Please enter a 5-letter word!");
         return;
     }
 
@@ -70,7 +69,7 @@ function checkWord() {
     if (currentWord === correctWord) {
         alert("Congratulations! 🎉 You guessed the word!");
     } else if (attempts >= 5) {
-        alert("Game Over! The correct word was " + correctWord);
+        alert("Game Over! Try again!");
     }
 
     attempts++;
